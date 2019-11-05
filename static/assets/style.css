@@ -1,0 +1,284 @@
+.content {
+    width: 90%;
+    margin: auto;
+    max-width: 37rem;
+}
+
+.top-header {
+    margin: auto;
+    max-width: 38rem;
+    margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-item {
+    padding-left: .1em;
+    padding-top: .4em;
+    border-top: 2px solid #cacaca;
+    display: inline-block;
+    margin-left: .5em;
+}
+
+.tags-url,
+.categories-url,
+.publish-date {
+    display: inline-block;
+    margin-top: .3em;
+    margin-left: .7em;
+    padding-left: .4em;
+    padding-right: .4em;
+}
+
+.categories-url {
+    color: rgb(234, 236, 239);
+    background-color: rgb(88, 96, 105);
+}
+
+.tags-url {
+    color: rgb(88, 96, 105);
+    background-color: rgb(234, 236, 239);
+}
+
+.post-item {
+    align-content: center;
+    display: flex;
+    margin-left: 1em;
+    margin-top: 1em;
+}
+
+.post-item-title {
+    margin-left: 3em;
+}
+
+h1 {
+    text-align: center;
+    margin: 2em 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.categories-url,
+.tags-url,
+.publish-date {
+    font-family: "Biaodian Pro Sans GB", "BOOK", "Helvetica Neue", Helvetica, Arial, "Han Heiti GB", sans-serif;
+}
+
+img {
+    width: 100%;
+}
+
+/* page width begin */
+.pr2,
+.px2 {
+    padding-right: 1rem;
+}
+
+.pl2,
+.px2 {
+    padding-left: 1rem;
+}
+
+.mr-auto,
+.mx-auto {
+    margin-right: auto;
+}
+
+.ml-auto,
+.mx-auto {
+    margin-left: auto;
+}
+
+.mb4,
+.my4 {
+    margin-bottom: 3rem;
+}
+
+.mt4,
+.my4 {
+    margin-top: 3rem;
+}
+
+/* page width end */
+
+
+/*  content paragraph begin */
+.content {
+    font-weight: 500;
+    font-size: .95em;
+    font-family: "Biaodian Pro Sans GB", 'LUCIDA', "Helvetica Neue", Helvetica, Arial, "Han Heiti GB", sans-serif;
+}
+
+/* 单独处理逗号 */
+h-char {
+    font-family: "Biaodian Pro Sans GB", "Helvetica Neue", Helvetica, Arial, "Han Heiti GB", sans-serif;
+}
+
+
+em {
+    font-style: normal;
+    color: #000;
+    text-decoration: underline;
+    text-decoration-style: double;
+    text-decoration-color: #ccc;
+    text-emphasis-style: none;
+}
+
+/* content paragraph begin */
+
+/*  code pre begin */
+pre {
+    font-family: CAMINGO, monospace;
+    font-size: .9rem;
+    tab-size: 4;
+    padding: .8rem;
+    margin: .8rem 0;
+    /* border: 1px solid #7a7a7a; */
+    line-height: 1.4em;
+    background-color: #fef9ed;
+    border-bottom: .1em solid #faeabd;
+    word-spacing: inherit;
+}
+
+code:lang(zh-Hans),
+kbd:lang(zh-Hans),
+samp:lang(zh-Hans),
+pre:lang(zh-Hans),
+code:lang(zh-CN),
+kbd:lang(zh-CN),
+samp:lang(zh-CN),
+pre:lang(zh-CN) {
+    font-family: CAMINGO, monospace;
+    font-size: .95rem;
+}
+
+p code {
+    border-radius: 2px;
+    background-color: #fef9ed;
+    border-bottom: .1em solid #faeabd;
+}
+
+/*  code pre end */
+
+
+/* table begin */
+td,
+th {
+    padding: .3em 1em;
+}
+
+th {
+    font-weight: bold;
+}
+
+/* tr:nth-child(even) {
+    background: #dfe2e5
+} */
+
+thead {
+    border-top: #dfe2e5 2px solid;
+    border-bottom: #dfe2e5 1px solid;
+}
+
+tbody {
+    border-bottom: #dfe2e5 1px solid;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+/* table end */
+
+.page-info {
+    text-align: right;
+    margin-top: 2em;
+}
+
+.categories-url,
+.tags-url,
+.publish-date {
+    line-height: 1.6rem;
+    font-size: 1em;
+    font-weight: 400;
+}
+
+#footer {
+    margin-top: 3em;
+    text-align: center;
+    font-size: .8rem;
+}
+
+a,
+header #header h1 a,
+article .title a,
+article .meta .tags a,
+article .divider a {
+    text-decoration: none;
+    color: #bb2222;
+}
+
+/* reponsive begin */
+@media only screen and (min-width: 769px) {
+    .content {
+        /* box-shadow: 0 7.5px 17.5px rgba(19, 19, 19, .1), 0 2.5px 7.5px rgba(19, 19, 19, .07); */
+        /* padding-top: 3em; */
+        /* padding-bottom: 2em; */
+        padding-left: 2em;
+        padding-right: 2em;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .content {
+        padding: 2em 1em;
+        margin-top: 1em;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .content {
+        padding: 2em .2em;
+        margin-top: .2em;
+        font-size: .8rem;
+    }
+}
+
+/* reponsive end */
+
+
+
+@font-face {
+    font-family: "CAMINGO";
+    src: url("./font/camingocode.woff2") format("woff2"),
+        url("./font/camingocode.woff") format("woff")
+}
+
+@font-face {
+    font-family: "LUCIDA";
+    src: url("./font/lucida_grande.woff2") format("woff2"),
+        url("./font/lucida_grande.woff") format("woff")
+}
+
+@font-face {
+    font-family: "HAN";
+    src: url("./font/han.woff2") format("woff2"),
+        url("./font/han.woff") format("woff")
+}
+
+@font-face {
+    font-family: "HAN-SPACE";
+    src: url("./font/han-space.woff2") format("woff2"),
+        url("./font/han-space.woff") format("woff")
+}
+
+@font-face {
+    font-family: "BOOK";
+    src: url("./font/book.woff2") format("woff2"),
+        url("./font/book.woff") format("woff")
+}

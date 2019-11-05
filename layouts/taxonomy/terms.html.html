@@ -1,0 +1,43 @@
+{{ define "title" }}
+  {{ .Title }} &ndash; {{ .Site.Title }}
+{{ end }}
+
+
+{{ define "main" }}
+<!-- list template -->
+<div>
+
+  <h1>{{ .Title }}</h1>
+  {{ .Content }}
+
+  {{ range .Paginator.Pages }}
+  <div class="rounded-2 box-shadow-medium px-3 pb-2 pt-2 mb-2">
+    <!-- single page card -->
+    <div class="mb-2">
+      <a href="{{ .URL }}" class="link-gray-dark"><span class="h2">{{ .Title }}</span></a>
+      <span class="text-right Counter Counter--gray">{{ len .Pages }}</span>
+    </div>
+    <div class="text-gray">
+      {{ range first 5 .Pages }}
+      <a class="btn btn-transparent bg-blue-light link-gray mb-2" href="{{ .URL }}" role="button">{{ .Title }}</a>
+      {{ end }}
+
+      {{ if gt (len .Pages) 5 }}
+      <a class="btn btn-transparent link-gray mb-2" href="{{ .URL }}" role="button">…more</a>
+      {{ end }}
+    </div>
+  </div>
+  {{ end }}
+
+  <!-- paginator nav -->
+  {{ partial "paginator.html" . }}
+
+
+</div>
+
+{{ end }}
+
+
+{{ define "side" }}
+  {{ partial "side.taxonomy.html" . }}
+{{ end }}

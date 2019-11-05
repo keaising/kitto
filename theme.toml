@@ -1,10 +1,10 @@
-name = "typego"
+name = "kitto"
 license = "MIT"
-licenselink = "https://github.com/keaising/typego/blob/master/LICENSE.md"
+licenselink = "https://github.com/keaising/kitto/blob/master/LICENSE.md"
 description = "A simple and beautiful Hugo theme based on GitHub's Primer CSS"
-homepage = "https://github.com/keaising/typego"
+homepage = "https://github.com/keaising/kitto"
 tags = ["blog", "simple", "minimal", "clean", "personal", "syntax highlighting", "white", "light", "simple page", "technical"]
-features = ["blog", "toc", "code pen", "syntax highlighting", "math", "math inline", "tags", "categories", "social", "share", "share button", "social share"]
+features = ["blog", "toc", "code pen", "syntax highlighting", "math", "math inline", "tags", "categories"]
 # Hugo version
 min_version = 0.55
 assetDir = "static/assets"

@@ -1,1 +1,1 @@
-# TypeGo
+# Kitto

@@ -1,12 +1,12 @@
-
-
 {{ define "main" }}
 
 <ul>
-    {{ range .Site.Taxonomies.tags }}
-        <li><a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a></li>
+    {{ range .Site.Taxonomies }}
         {{ range . }}
-        <li><a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a></li>
+            <li><a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a></li>
+            {{ range . }}
+                <li><a href="{{ .Page.RelPermalink }}">{{ dateFormat "2 Nov 2006" .PublishDate}} {{ .Page.Title }} </a></li>
+            {{ end }}
         {{ end }}
     {{ end }}
 </ul>

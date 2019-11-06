@@ -13,6 +13,13 @@
     justify-content: space-between;
 }
 
+.site-title {
+    border-top: 2px solid #cacaca;
+    padding-left: .1em;
+    padding-right: .1em;
+    padding-top: .4em;
+}
+
 .nav-item {
     padding-left: .1em;
     padding-top: .4em;

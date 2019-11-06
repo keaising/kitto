@@ -8,6 +8,9 @@ features = ["blog", "toc", "code pen", "syntax highlighting", "math", "math inli
 # Hugo version
 min_version = 0.55
 assetDir = "static/assets"
+pygmentsCodeFences = true
+disableFastRender = true
+pygmentsUseClasses = true
 
 [author]
   name = "Shuxiao Wang"

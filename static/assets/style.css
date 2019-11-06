@@ -133,7 +133,7 @@ em {
 
 /*  code pre begin */
 pre {
-    font-family: CAMINGO, monospace;
+    font-family: Iosevka, Menlo, Consolas, monospace;
     font-size: .9rem;
     tab-size: 4;
     padding: .8rem;
@@ -153,8 +153,9 @@ code:lang(zh-CN),
 kbd:lang(zh-CN),
 samp:lang(zh-CN),
 pre:lang(zh-CN) {
-    font-family: CAMINGO, monospace;
-    font-size: .95rem;
+    font-family: Consolas, 'Source Code Pro', Menlo, monospace;
+    font-weight: 200;
+    font-size: .8rem;
 }
 
 p code {

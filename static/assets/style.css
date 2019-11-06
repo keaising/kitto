@@ -69,6 +69,21 @@ h6,
     font-family: "Biaodian Pro Sans GB", "BOOK", "Helvetica Neue", Helvetica, Arial, "Han Heiti GB", sans-serif;
 }
 
+.collect-title, .collect-item {
+    list-style-type: none;
+    display: flex;
+    padding: .4em;
+}
+.collect-title {
+    margin-top: 2em;
+}
+.collect-title::before {
+    content: "⭠ ";
+    color: #ccc;
+    margin-right: .7em;
+}
+
+
 img {
     width: 100%;
 }

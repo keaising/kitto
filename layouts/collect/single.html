@@ -1,0 +1,18 @@
+{{ define "main" }}
+
+<ul>
+    {{ range .Site.Taxonomies }}
+        {{ range . }}
+            <li class="collect-title"><a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a></li>
+            {{ range .Pages }}
+                <!-- <li class="collect-item">
+                    <div>{{ dateFormat "2006-01-02" .PublishDate}}</div>
+                    <a href="{{ .Page.RelPermalink }}">{{ .Page.Title }} </a>
+                </li> -->
+                {{ partial "card.page.html" . }}
+            {{ end }}
+        {{ end }}
+    {{ end }}
+</ul>
+
+{{ end }}

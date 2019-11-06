@@ -1,0 +1,14 @@
+
+
+{{ define "main" }}
+
+<ul>
+    {{ range .Site.Taxonomies.tags }}
+        <li><a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a></li>
+        {{ range . }}
+        <li><a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a></li>
+        {{ end }}
+    {{ end }}
+</ul>
+
+{{ end }}

@@ -12,13 +12,20 @@
     align-items: center;
     justify-content: space-between;
 }
-
+.site-title {
+    background-image: url(../favicon.ico);
+    background-size: cover;
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    color: transparent;
+}
 .site-title, .nav-item {
-    border-top: 2px solid #cacaca;
-    padding: .4em .1em;
+    padding: .4em;
 }
 
 .nav-item {
+    border-top: 2px solid #cacaca;
     display: inline-block;
     margin-left: .5em;
 }

@@ -10,7 +10,8 @@
   <h1>{{ .Title }}</h1>
   {{ .Content }}
 
-  {{ range .Paginator.Pages }}
+  {{ range .Pages }}
+    <!-- .Paginator.Pages -->
     <!-- single page card -->
     {{ partial "card.page.html" . }}
   {{ end }}

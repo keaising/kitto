@@ -13,17 +13,12 @@
     justify-content: space-between;
 }
 
-.site-title {
+.site-title, .nav-item {
     border-top: 2px solid #cacaca;
-    padding-left: .1em;
-    padding-right: .1em;
-    padding-top: .4em;
+    padding: .4em .1em;
 }
 
 .nav-item {
-    padding-left: .1em;
-    padding-top: .4em;
-    border-top: 2px solid #cacaca;
     display: inline-block;
     margin-left: .5em;
 }
@@ -267,6 +262,11 @@ article .meta .tags a,
 article .divider a {
     text-decoration: none;
     color: #bb2222;
+}
+
+.site-title:hover, .nav-item:hover {
+    background-color: #f0f0f0;
+    border-top-color: #b0b0b0
 }
 
 /* reponsive begin */

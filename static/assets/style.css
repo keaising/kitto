@@ -292,7 +292,8 @@ article .divider a {
     .content {
         padding: 2em .2em;
         margin-top: .2em;
-        font-size: .8rem;
+        font-size: .9rem;
+        font-weight: 200;
     }
 }
 

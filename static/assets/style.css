@@ -148,7 +148,7 @@ img {
 
 /*  content paragraph begin */
 .content {
-    font-weight: 500;
+    font-weight: normal;
     font-size: .95em;
     font-family: "Biaodian Pro Sans GB", 'LUCIDA', "Helvetica Neue", Helvetica, Arial, "Han Heiti GB", sans-serif;
 }
@@ -293,7 +293,6 @@ article .divider a {
         padding: 2em .2em;
         margin-top: .2em;
         font-size: .9rem;
-        font-weight: normal;
     }
 }
 

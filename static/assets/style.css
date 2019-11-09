@@ -16,8 +16,8 @@
     background-image: url(../favicon.ico);
     background-size: cover;
     display: inline-block;
-    width: 1.5em;
-    height: 1.5em;
+    width: 1.2em;
+    height: 1.2em;
     color: transparent;
 }
 .site-title, .nav-item {
@@ -54,15 +54,26 @@
     background-color: #eaecef;
 }
 
+.collection-set {
+    margin: auto;
+}
+.grid-cell {
+    -webkit-box-flex: 1;
+    flex: 1;
+}
 .post-item {
     align-content: center;
     display: flex;
-    margin-left: 2.3em;
+    list-style: none;
     margin-top: 1em;
 }
-
+.post-item-time {
+    flex: 20%;
+    text-align: right;
+}
 .post-item-title {
-    margin-left: 3em;
+    flex: none;
+    flex: 41.8% !important;
 }
 
 article blockquote:lang(zh-Hans), blockquote:lang(zh-Hans) {
@@ -293,14 +304,32 @@ article .divider a {
     .post-item-title {
         margin-left: 1.3em;
     }    
+    .post-item-time {
+        flex: 25%;
+        text-align: right;
+    }
+    .post-item-title {
+        flex: none;
+        flex: 51.8% !important;
+    }
+    
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 500px) {
     .content {
         padding: 2em .2em;
         margin-top: .2em;
         font-size: .9rem;
     }
+    .post-item-time {
+        flex: 1;
+        text-align: right;
+    }
+    .post-item-title {
+        flex: none;
+        flex: 61.8% !important;
+    }
+    
 }
 
 /* reponsive end */

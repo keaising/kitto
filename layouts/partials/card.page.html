@@ -1,9 +1,16 @@
 <!-- single page card -->
 <div class="post-item">
-    <span class="datetime-span" title="Lastmod: {{ .Lastmod.Format "2006-01-02" }}. Published at: {{ .PublishDate.Format "2006-01-02" }}.">
-        {{ dateFormat "2006-01-02" .PublishDate }}
-    </span>
-    <a href="{{ .URL }}" class="post-item-title">
-        <div class="h2 mt-1 mb-1">{{ .Title }}</div>
-    </a>
+    <div class="post-item-time grid-cell">
+        <span class="datetime-span"
+            title="Lastmod: {{ .Lastmod.Format "2006-01-02" }}. Published at: {{ .PublishDate.Format "2006-01-02" }}.">
+            {{ dateFormat "2006-01-02" .PublishDate }}
+        </span>
+    </div>
+    <div class="post-item-space grid-cell">
+    </div>
+    <div class="post-item-title grid-cell">
+        <a href="{{ .URL }}">
+            <div>{{ .Title }}</div>
+        </a>
+    </div>
 </div>

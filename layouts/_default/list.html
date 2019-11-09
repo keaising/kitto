@@ -7,14 +7,16 @@
 <!-- list template -->
 <div>
 
-  <h1>{{ .Title }}</h1>
-  {{ .Content }}
+    <h1>{{ .Title }}</h1>
+    {{ .Content }}
+    <div class="collection-set">
+        {{ range .Pages }}
+        <!-- .Paginator.Pages -->
+        <!-- single page card -->
+            {{ partial "card.page.html" . }}
+        {{ end }}
+    </div>
 
-  {{ range .Pages }}
-    <!-- .Paginator.Pages -->
-    <!-- single page card -->
-    {{ partial "card.page.html" . }}
-  {{ end }}
 
 </div>
 

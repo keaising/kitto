@@ -3,7 +3,11 @@
 <ul class="collection">
     {{ range .Site.Taxonomies }}
         {{ range . }}
-            <li class="collect-title"><a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a></li>
+        <div class="tag-title">
+            <div class="tag-title-left grid-cell"><a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a></div>
+            <div class="tag-title-center grid-cell"></div>
+            <div class="tag-title-right grid-cell"></div>
+        </div>
             {{ range .Pages }}
                 {{ partial "card.page.html" . }}
             {{ end }}

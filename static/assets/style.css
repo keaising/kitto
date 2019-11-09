@@ -102,18 +102,6 @@ h2 {
     display: flex;
     padding: .4em;
 }
-.collect-title {
-    margin-top: 2em;
-    margin-bottom: -.5em;
-    font-size: 1.2em;
-}
-.collect-head {
-    margin-top: 2em;
-}
-.collect-title::before {
-    content: "⭠ ";
-    color: #ccc;
-}
 .collect-desc {
     margin-left: 2.2em;
     margin-top: .5em;
@@ -121,10 +109,22 @@ h2 {
     color: #999999
     /* text-align: center; */
 }
-.collect-title a {
-    margin-left: .6em;
-}
 
+.tag-title {
+    flex: 1;
+    display: flex;
+    margin-top: 3em;    
+}
+.tag-title-left {
+    flex: 20%;
+    text-align: right;
+    font-size: 1.4em;
+
+}
+.tag-title-right {
+    flex: 41.8%;
+    text-align: left;
+}
 
 img {
     width: 100%;
@@ -312,7 +312,18 @@ article .divider a {
         flex: none;
         flex: 51.8% !important;
     }
-    
+    .tag-title {
+        margin-top: 3em;    
+    }
+    .tag-title-left {
+        flex: 99%;
+        text-align: center;
+        font-size: 1.4em;
+    }
+    .tag-title-right {
+        flex: 1%;
+        text-align: left;
+    }
 }
 
 @media only screen and (max-width: 500px) {
@@ -329,7 +340,9 @@ article .divider a {
         flex: none;
         flex: 61.8% !important;
     }
-    
+    .tag-title-left {
+        text-align: left;
+    }
 }
 
 /* reponsive end */

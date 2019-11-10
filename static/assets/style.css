@@ -105,18 +105,20 @@
 ul, li {
     list-style: none;
 }
+li {
+    margin-top: 0.1em;
+}
 ul, ol {
-    padding-left: 1em;
+    padding-left: 1.5em;
 }
 li::before {
     content: '\f1ce';
     font-family: "Font Awesome\ 5 Free";
     color: #999;
     font-weight: 600;
-    padding-right: .6em;
+    padding-right: .5em;
 }
 li ul li::before {
-    margin-left: 1em;
     content: '\f00d';
 }
 li ul li ul li::before {

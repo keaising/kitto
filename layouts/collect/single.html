@@ -1,5 +1,18 @@
 {{ define "main" }}
 
+
+<div class="cloud">
+    {{ range .Site.Taxonomies }}
+        {{ range . }}
+            {{ $NoSpace := replace .Page.Title " " "-" }}
+            {{ $NoSlash := replace $NoSpace "/" "-" }}
+            {{ $title := lower $NoSlash }}
+            <div class="cloud-item"><a href="#{{ $title }}">{{ .Page.Title }}</a></div>
+        {{ end }}
+    {{ end }}
+</div>
+
+
 <ul class="collection">
     {{ range .Site.Taxonomies }}
         {{ range . }}

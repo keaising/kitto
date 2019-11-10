@@ -1,36 +1,35 @@
-
-
 {{ define "main" }}
 
 <ul class="collection">
     {{ range $section := .Site.Sections }}
-        {{ if (ne $section.Title "Posts") }}
-        <div class="collect-head">
-            <li class="collect-title"><a href="{{ $section.RelPermalink }}">{{ $section.Title }}</a></li>
-            <div class="collect-desc"> {{ .Params.desc }}</div>
-        </div>
-        {{ if (eq (lower .Params.orderby) "title") }}
-            {{ range $section.Pages.ByTitle }}
-                {{ partial "card.page.html" . }}
-            {{ end }}
-        {{ else if (eq (lower .Params.orderby) "titledesc") }}
-            {{ range $section.Pages.ByTitle.Reverse }}
-                {{ partial "card.page.html" . }}
-            {{ end }}
-        {{ else if (eq (lower .Params.orderby) "weight") }}
-            {{ range ($section.Pages.ByParam "weight") }}
-                {{ partial "card.page.html" . }}
-            {{ end }}
-        {{ else if (eq (lower .Params.orderby) "date") }}
-            {{ range $section.Pages.ByDate }}
-                {{ partial "card.page.html" . }}
-            {{ end }}
-        {{ else }}
-            {{ range $section.Pages.ByDate.Reverse }}
-                {{ partial "card.page.html" . }}
-            {{ end }}
-        {{ end }}
-        {{ end }}
+    {{ if (ne $section.Title "Posts") }}
+    <div class="tag-title">
+        <div class="tag-title-left grid-cell"><a href="{{ $section.RelPermalink }}">{{ $section.Title }}</a></div>
+        <div class="tag-title-center grid-cell"></div>
+        <div class="tag-title-right grid-cell">{{ .Params.desc }}</div>
+    </div>
+    {{ if (eq (lower .Params.orderby) "title") }}
+    {{ range $section.Pages.ByTitle }}
+    {{ partial "card.page.html" . }}
+    {{ end }}
+    {{ else if (eq (lower .Params.orderby) "titledesc") }}
+    {{ range $section.Pages.ByTitle.Reverse }}
+    {{ partial "card.page.html" . }}
+    {{ end }}
+    {{ else if (eq (lower .Params.orderby) "weight") }}
+    {{ range ($section.Pages.ByParam "weight") }}
+    {{ partial "card.page.html" . }}
+    {{ end }}
+    {{ else if (eq (lower .Params.orderby) "date") }}
+    {{ range $section.Pages.ByDate }}
+    {{ partial "card.page.html" . }}
+    {{ end }}
+    {{ else }}
+    {{ range $section.Pages.ByDate.Reverse }}
+    {{ partial "card.page.html" . }}
+    {{ end }}
+    {{ end }}
+    {{ end }}
     {{ end }}
 </ul>
 

@@ -3,10 +3,12 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{ .Site.Title }} - {{ .Page.Title }}</title>
     <link rel="stylesheet" href="{{ `assets/han.css` | relURL }}">
     <link rel="stylesheet" href="{{ `assets/normalize.css` | relURL }}">
     <link rel="stylesheet" href="{{ `assets/style.css` | relURL }}">
     <link rel="stylesheet" href="{{ `assets/syntax.css` | relURL }}">
+    <script src="{{ `assets/anchor.min.js` | relURL }}"></script>
 </head>
 
 <body>
@@ -22,12 +24,20 @@
     </div>
 
     <!-- Scripts -->
+    <script>anchors.add();</script>
     <script type="text/javascript"
         src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="{{ `assets/han.js` | relURL }}"></script>
     <!-- MathJax -->
     <script type="text/x-mathjax-config">MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
     </script>
+    <script>
+        anchors.options = {
+            placement: 'left',
+        };
+        anchors.add();
+        anchors.add(".tag-title-left");
+      </script>
 </body>
 
 </html>

@@ -86,7 +86,6 @@
 }
 
 .cloud {
-
     display: flex;
     flex-wrap: wrap;
 }
@@ -102,6 +101,37 @@
 
 .tag-title a {
     color: #586069;
+}
+ul, li {
+    list-style: none;
+}
+ul, ol {
+    padding-left: 1em;
+}
+li {
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+}
+li p {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    flex: 90%;
+}
+li::before {
+    content: '\f1ce';
+    font-family: "Font Awesome\ 5 Free";
+    color: #999;
+    font-weight: 600;
+    padding-right: .6em;
+}
+li ul li::before {
+    margin-left: 1em;
+    content: '\f00d';
+}
+li ul li ul li::before {
+    margin-left: 1em;
+    content: '\f068';
 }
 
 article blockquote:lang(zh-Hans),

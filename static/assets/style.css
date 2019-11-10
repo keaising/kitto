@@ -108,16 +108,6 @@ ul, li {
 ul, ol {
     padding-left: 1em;
 }
-li {
-    display: flex;
-    justify-content: start;
-    flex-wrap: wrap;
-}
-li p {
-    margin-block-start: 0;
-    margin-block-end: 0;
-    flex: 90%;
-}
 li::before {
     content: '\f1ce';
     font-family: "Font Awesome\ 5 Free";

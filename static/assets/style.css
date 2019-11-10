@@ -77,6 +77,7 @@
 .post-item-time {
     flex: 20%;
     text-align: right;
+    color: #999;
 }
 
 .post-item-title {
@@ -96,11 +97,11 @@
 }
 
 .cloud a {
-    color: #0000009c;
+    color: #999;
 }
 
 .tag-title a {
-    color: #0000009c;
+    color: #586069;
 }
 
 article blockquote:lang(zh-Hans),
@@ -114,12 +115,14 @@ blockquote:lang(zh-Hans) {
 h1 {
     text-align: center;
     margin: 2em 0;
+    color: #586069;;
 }
 
 h2 {
     border-bottom: 2px solid #eaecef;
     padding-top: 1.8em;
     margin-bottom: 1em;
+    color: #586069;;
 }
 
 .collection {
@@ -185,6 +188,7 @@ img {
 
 /*  content paragraph begin */
 .content {
+    color: #586069;
     font-weight: normal;
     font-size: .95em;
     font-family: "Biaodian Pro Sans GB", 'LUCIDA', "Helvetica Neue", Helvetica, Arial, "Han Heiti GB", sans-serif;

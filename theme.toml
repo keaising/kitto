@@ -1,12 +1,12 @@
 name = "kitto"
 license = "MIT"
 licenselink = "https://github.com/keaising/kitto/blob/master/LICENSE.md"
-description = "A simple and beautiful Hugo theme based on GitHub's Primer CSS"
+description = "Yet another simple Hugo theme."
 homepage = "https://github.com/keaising/kitto"
-tags = ["blog", "simple", "minimal", "clean", "personal", "syntax highlighting", "white", "light", "simple page", "technical"]
+tags = ["blog", "simple", "clean", "personal", "syntax highlighting", "white", "light", "simple page", "technical"]
 features = ["blog", "toc", "code pen", "syntax highlighting", "math", "math inline", "tags", "categories"]
 # Hugo version
-min_version = 0.55
+min_version = 0.58
 assetDir = "static/assets"
 pygmentsCodeFences = true
 disableFastRender = true

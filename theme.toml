@@ -6,7 +6,7 @@ homepage = "https://github.com/keaising/kitto"
 tags = ["blog", "simple", "clean", "personal", "syntax highlighting", "white", "light", "simple page", "technical"]
 features = ["blog", "toc", "code pen", "syntax highlighting", "math", "math inline", "tags", "categories"]
 # Hugo version
-min_version = 0.58
+min_version = 0.55
 assetDir = "static/assets"
 pygmentsCodeFences = true
 disableFastRender = true

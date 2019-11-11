@@ -326,8 +326,14 @@ article .title a,
 article .meta .tags a,
 article .divider a {
     text-decoration: none;
-    /* color: #8e44ad; */
     color: #bb2222;
+}
+.true-content a {
+    color: #000000d0;
+    border-bottom: 1px #999; 
+    border-bottom-style: double;   
+    display: inline-block;
+    line-height: 1em;
 }
 
 .site-title:hover,
@@ -436,6 +442,7 @@ article .divider a {
 
 @font-face {
     font-family: "BOOK";
+    font-stretch: 20%;
     src: url("./font/book.woff2") format("woff2"),
         url("./font/book.woff") format("woff")
 }

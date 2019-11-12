@@ -240,12 +240,14 @@ pre {
     font-family: Iosevka, Menlo, Consolas, monospace;
     font-size: .9rem;
     tab-size: 4;
-    padding: .8rem;
+    padding: 1rem;
     margin: .8rem 0;
     /* border: 1px solid #7a7a7a; */
     line-height: 1.4em;
-    background-color: #fef9ed;
-    border-bottom: .1em solid #faeabd;
+    /* background-color: #fef9ed;
+    border-bottom: .1em solid #faeabd; */
+    border-radius: 2px;
+    border: 1px solid #999;
     word-spacing: inherit;
 }
 
@@ -264,8 +266,10 @@ pre:lang(zh-CN) {
 
 p code {
     border-radius: 2px;
-    background-color: #fef9ed;
-    border-bottom: .1em solid #faeabd;
+    border: 1px solid #586069;
+    /* background-color: #fef9ed;
+    border-bottom: .1em solid #faeabd; */
+    padding: .1em .5em;
 }
 
 /*  code pre end */

@@ -107,13 +107,23 @@ ul, li {
 }
 li {
     margin-top: 0.1em;
+    counter-increment: item;
 }
 ul, ol {
     padding-left: 1em;
 }
-li::before {
+ul li::before {
     content: '\f1ce';
     font-family: "Font Awesome\ 5 Free";
+    font-size: .9em;
+    color: #999;
+    font-weight: 600;
+    padding-right: .5em;
+}
+ol li::before {
+    content: counter(item) ".  ";
+    border-radius: 100%;
+    text-align: left;
     font-size: .9em;
     color: #999;
     font-weight: 600;

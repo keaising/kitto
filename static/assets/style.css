@@ -110,7 +110,7 @@ li {
     counter-increment: item;
 }
 ul, ol {
-    padding-left: 1em;
+    padding-left: 2em;
 }
 ul li::before {
     content: '\f1ce';
@@ -182,6 +182,27 @@ h2 {
     color: #999999;
 }
 
+dl {
+    border: 1px solid hsl(216, 14%, 93%);
+    padding-top: .8em;
+    padding-left: .8em;
+    padding-right: .8em;
+}
+dt {
+    color: #586069;
+    background-color: #eaecef;
+    display: inline;
+    padding: 0 .4em;
+}
+dd {
+    margin-bottom: .5em;
+    margin-top: .5em;
+    margin-inline-start: 2em;
+}
+dd ol, dd ul {
+    padding-left: 0;
+}
+
 img {
     width: 100%;
 }
@@ -224,8 +245,8 @@ img {
 .content {
     color: #586069;
     font-weight: normal;
-    font-size: .95em;
-    font-family: "Biaodian Pro Sans GB", 'LUCIDA', "Helvetica Neue", Helvetica, Arial, "Han Heiti GB", sans-serif;
+    /* font-size: .95em; */
+    font-family: "Biaodian Pro Sans GB", "LUCIDA", "Helvetica Neue", Helvetica, Arial, "Han Heiti GB", sans-serif;
 }
 
 /* 单独处理逗号 */
@@ -456,7 +477,7 @@ article .divider a {
 
 @font-face {
     font-family: "BOOK";
-    font-stretch: 20%;
+    font-stretch: 2;
     src: url("./font/book.woff2") format("woff2"),
         url("./font/book.woff") format("woff")
 }

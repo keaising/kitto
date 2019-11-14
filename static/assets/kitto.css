@@ -1,0 +1,121 @@
+@charset "UTF-8";
+/* tag categories begin */
+.tags-url,
+.categories-url,
+.publish-date {
+  display: inline-block;
+  margin-top: 0.3em;
+  margin-left: 0.7em;
+  padding-left: 0.4em;
+  padding-right: 0.4em;
+}
+
+.datetime-span {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.categories-url {
+  color: #eaecef;
+  background-color: #586069;
+}
+
+.tags-url {
+  color: #586069;
+  background-color: #eaecef;
+}
+
+/* tag categories end */
+/*  code pre begin */
+pre {
+  font-family: Iosevka, Consolas, "Source Code Pro", Menlo, monospace;
+  font-size: 0.8rem;
+  font-weight: 200;
+  border-radius: 1px;
+  border: 1px solid #eaecef;
+  tab-size: 4;
+  padding: 1rem;
+  margin: 0.8rem 0;
+  line-height: 1.4em;
+  word-spacing: inherit;
+}
+
+code:lang(zh-Hans),
+kbd:lang(zh-Hans),
+samp:lang(zh-Hans),
+pre:lang(zh-Hans),
+code:lang(zh-CN),
+kbd:lang(zh-CN),
+samp:lang(zh-CN),
+pre:lang(zh-CN) {
+  font-family: Iosevka, Consolas, "Source Code Pro", Menlo, monospace;
+  font-size: 0.8rem;
+  font-weight: 200;
+}
+
+p code {
+  border-radius: 1px;
+  border: 1px solid #eaecef;
+  padding: 0.1em 0.5em;
+}
+
+/*  code pre end */
+/* table begin */
+td,
+th {
+  padding: 0.3em 1em;
+}
+
+th {
+  font-weight: bold;
+}
+
+thead {
+  border-top: #dfe2e5 2px solid;
+  border-bottom: #dfe2e5 1px solid;
+}
+
+tbody {
+  border-bottom: #dfe2e5 1px solid;
+}
+
+table {
+  margin: auto;
+  border-collapse: collapse;
+}
+
+/* table end */
+/* image begin */
+img {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+/* image end */
+/*  content paragraph begin */
+.content {
+  color: #000;
+  font-weight: 400;
+  font-size: 0.95em;
+  font-family: "Biaodian Pro Sans GB", "LUCIDA", "Helvetica Neue", Helvetica, Arial, "Han Heiti GB", sans-serif;
+}
+
+/* 单独处理逗号 */
+h-char {
+  font-family: "Biaodian Pro Sans GB", "Helvetica Neue", Helvetica, Arial, "Han Heiti GB", sans-serif;
+}
+
+em {
+  font-style: normal;
+  color: #000;
+  text-decoration: underline;
+  text-decoration-style: double;
+  text-decoration-color: #ccc;
+  text-emphasis-style: none;
+}
+
+/* content paragraph end */
+
+/*# sourceMappingURL=kitto.css.map */

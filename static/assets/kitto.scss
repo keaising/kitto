@@ -1,0 +1,159 @@
+//color
+$grey-black : #586069;
+$grey-white : #eaecef;
+$grey-border : #dfe2e5;
+$black : #000;
+
+//style
+$thin-border : $grey-border 1px solid;
+$bold-border : $grey-border 2px solid;
+
+
+//font
+$mono-font : Iosevka, Consolas, 'Source Code Pro', Menlo, monospace;
+$normal-font : "Biaodian Pro Sans GB", "LUCIDA", "Helvetica Neue", Helvetica, Arial, "Han Heiti GB", sans-serif;
+$comma-font: "Biaodian Pro Sans GB", "Helvetica Neue", Helvetica, Arial, "Han Heiti GB", sans-serif;
+
+//mixin
+//字符边框
+@mixin word-margin-padding {
+    margin-top: .3em;
+    margin-left: .7em;
+    padding-left: .4em;
+    padding-right: .4em;
+}
+
+//代码样式
+@mixin code-format {
+    font-family: $mono-font;
+    font-size: .8rem;
+    font-weight: 200;
+}
+
+@mixin normal-font-format {
+    color: $black;
+    font-weight: 400;
+    font-size: .95em;
+    font-family: $normal-font;
+}
+
+//边框样式
+@mixin pre-border {
+    border-radius: 1px;
+    border: 1px solid $grey-white;
+}
+
+//居中对齐
+@mixin block-align-center {
+    margin-left: auto; 
+    margin-right:auto; 
+    display:block;
+}
+
+
+/* tag categories begin */
+.tags-url,
+.categories-url,
+.publish-date {
+    display: inline-block;
+    @include word-margin-padding();
+}
+
+.datetime-span {
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.categories-url {
+    color: $grey-white;
+    background-color: $grey-black;
+}
+
+.tags-url {
+    color: $grey-black;
+    background-color: $grey-white;
+}
+
+/* tag categories end */
+
+/*  code pre begin */
+pre {
+    @include code-format();
+    @include pre-border();
+    tab-size: 4;
+    padding: 1rem;
+    margin: .8rem 0;
+    line-height: 1.4em;
+    word-spacing: inherit;
+}
+
+code:lang(zh-Hans),
+kbd:lang(zh-Hans),
+samp:lang(zh-Hans),
+pre:lang(zh-Hans),
+code:lang(zh-CN),
+kbd:lang(zh-CN),
+samp:lang(zh-CN),
+pre:lang(zh-CN) {
+    @include code-format();
+}
+
+p code {
+    @include pre-border();
+    padding: .1em .5em;
+}
+/*  code pre end */
+
+/* table begin */
+td,
+th {
+    padding: .3em 1em;
+}
+
+th {
+    font-weight: bold;
+}
+
+thead {
+    border-top: $bold-border;
+    border-bottom: $thin-border;
+}
+
+tbody {
+    border-bottom: $thin-border;
+}
+
+table {
+    margin: auto;
+    border-collapse: collapse;
+}
+/* table end */
+
+/* image begin */
+img {
+    width: 80%;
+    @include block-align-center();
+}
+/* image end */
+
+
+/*  content paragraph begin */
+.content {
+    @include normal-font-format();
+}
+
+/* 单独处理逗号 */
+h-char {
+    font-family: $comma-font;
+}
+
+em {
+    font-style: normal;
+    color: #000;
+    text-decoration: underline;
+    text-decoration-style: double;
+    text-decoration-color: #ccc;
+    text-emphasis-style: none;
+}
+
+/* content paragraph end */

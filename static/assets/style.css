@@ -176,8 +176,6 @@ dl {
     padding-top: .8em;
     padding-left: .8em;
     padding-right: .8em;
-    grid-template-columns: auto auto;
-    display: grid;
 }
 
 dt {
@@ -185,7 +183,6 @@ dt {
     margin-top: .5em;
     padding-top: .1em;
     color: #586069;
-    grid-column: 1;
     font-weight: bold;
 }
 
@@ -193,7 +190,6 @@ dd {
     margin-bottom: .5em;
     margin-top: .5em;
     margin-inline-start: 2em;
-    grid-column: 2;
 }
 
 dd ol,

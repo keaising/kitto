@@ -38,6 +38,10 @@
     flex: 1;
 }
 
+.collection {
+    text-indent: 0;
+}
+
 .post-item {
     align-content: center;
     display: flex;

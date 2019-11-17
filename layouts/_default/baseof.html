@@ -1,20 +1,21 @@
 <!DOCTYPE html>
-<html lang="zh-Hans" class="han-init">
+<html lang="zh-Hans" class="han-la">
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{{ .Page.Title }} - {{ .Site.Title }}</title>
-    <link rel="stylesheet" href="{{ `assets/han.css` | relURL }}">
     <link rel="stylesheet" href="{{ `assets/normalize.css` | relURL }}">
     <link rel="stylesheet" href="{{ `assets/style.css` | relURL }}">
     <link rel="stylesheet" href="{{ `assets/syntax.css` | relURL }}">
     <link rel="stylesheet" href="{{ `assets/kitto.css` | relURL }}">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
     <script src="{{ `assets/anchor.min.js` | relURL }}"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="{{ `assets/text-autospace.js` | relURL }}"></script>
 </head>
 
 <body>
-    <div class="content index width mx-auto px2 my4">
+    <div class="content width">
         {{ partial "header.html" . }}
         <div>
             {{ block "main" . }}
@@ -29,7 +30,6 @@
     <script>anchors.add();</script>
     <script type="text/javascript"
         src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/javascript" src="{{ `assets/han.js` | relURL }}"></script>
     <!-- MathJax -->
     <script type="text/x-mathjax-config">MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
     </script>

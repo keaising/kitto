@@ -1,8 +1,4 @@
-.content {
-    width: 90%;
-    margin: auto;
-    max-width: 40rem;
-}
+
 
 .top-header {
     margin: auto;
@@ -80,6 +76,7 @@
 
 ul,
 li {
+    display: list-items;
     list-style: none;
 }
 
@@ -91,6 +88,7 @@ ol li {
 ul,
 ol {
     padding-left: 2em;
+    text-indent: -2em;
 }
 
 ul li::before {
@@ -99,7 +97,7 @@ ul li::before {
     font-size: .9em;
     color: #999;
     font-weight: 600;
-    padding-right: .5em;
+    padding-right: 1.1em;
 }
 
 ol li::before {
@@ -109,7 +107,7 @@ ol li::before {
     font-size: .9em;
     color: #999;
     font-weight: 600;
-    padding-right: .5em;
+    padding-right: 1.1em;
 }
 
 li ul li::before {
@@ -120,30 +118,6 @@ li ul li::before {
 li ul li ul li::before {
     margin-left: 1em;
     content: '\f068';
-}
-
-article blockquote:lang(zh-Hans),
-blockquote:lang(zh-Hans) {
-    font-family: "Biaodian Pro Sans GB", "LUCIDA", "Helvetica Neue", Helvetica, Arial, "Han Heiti GB", sans-serif;
-    color: #999999;
-    padding-left: 1.8em;
-    margin: .2em;
-    border-left: .2em solid #e5e9f2;
-}
-
-h1 {
-    text-align: center;
-    margin: 2em 0;
-    color: #586069;
-    ;
-}
-
-h2 {
-    border-bottom: 2px solid #eaecef;
-    padding-top: 1.8em;
-    margin-bottom: 1em;
-    color: #586069;
-    ;
 }
 
 .collection {
@@ -169,78 +143,7 @@ h2 {
     color: #999999;
 }
 
-dl {
-    border: 1px solid #ebedf0;
-    margin-block-start: 0;
-    margin-block-end: 0;
-    padding-top: .8em;
-    padding-left: .8em;
-    padding-right: .8em;
-}
 
-dt {
-    margin-bottom: .5em;
-    margin-top: .5em;
-    padding-top: .1em;
-    color: #586069;
-    font-weight: bold;
-}
-
-dd {
-    margin-bottom: .5em;
-    margin-top: .5em;
-    margin-inline-start: 2em;
-}
-
-dd ol,
-dd ul {
-    padding-left: 0;
-    margin-block-start: 0;
-    margin-block-end: 0;
-}
-
-dd p {
-    margin-block-start: 0;
-    margin-block-end: 0;
-}
-dd pre {
-    margin: 0;
-}
-img {
-    width: 100%;
-}
-
-/* page width begin */
-.pr2,
-.px2 {
-    padding-right: 1rem;
-}
-
-.pl2,
-.px2 {
-    padding-left: 1rem;
-}
-
-.mr-auto,
-.mx-auto {
-    margin-right: auto;
-}
-
-.ml-auto,
-.mx-auto {
-    margin-left: auto;
-}
-
-.mb4,
-.my4 {
-    margin-bottom: 3rem;
-}
-
-.mt4,
-.my4 {
-    margin-top: 3rem;
-}
-/* page width end */
 
 .page-info {
     text-align: right;
@@ -268,17 +171,6 @@ article .meta .tags a,
 article .divider a {
     text-decoration: none;
     color: #bb2222;
-}
-
-.true-content a {
-    color: #000000d0;
-    border-bottom: 1px solid #999;
-    display: inline-block;
-    line-height: 1em;
-}
-
-article {
-    line-height: 1.6em;
 }
 
 .site-title:hover,
@@ -366,36 +258,3 @@ article {
 }
 
 /* reponsive end */
-
-
-
-@font-face {
-    font-family: "CAMINGO";
-    src: url("./font/camingocode.woff2") format("woff2"),
-        url("./font/camingocode.woff") format("woff")
-}
-
-@font-face {
-    font-family: "LUCIDA";
-    src: url("./font/lucida_grande.woff2") format("woff2"),
-        url("./font/lucida_grande.woff") format("woff")
-}
-
-@font-face {
-    font-family: "HAN";
-    src: url("./font/han.woff2") format("woff2"),
-        url("./font/han.woff") format("woff")
-}
-
-@font-face {
-    font-family: "HAN-SPACE";
-    src: url("./font/han-space.woff2") format("woff2"),
-        url("./font/han-space.woff") format("woff")
-}
-
-@font-face {
-    font-family: "BOOK";
-    font-stretch: 2;
-    src: url("./font/book.woff2") format("woff2"),
-        url("./font/book.woff") format("woff")
-}

@@ -11,8 +11,7 @@ $bold-border : $grey-border 2px solid;
 
 //font
 $mono-font : Iosevka, Consolas, 'Source Code Pro', Menlo, monospace;
-$normal-font : "Biaodian Pro Sans GB", "LUCIDA", "Helvetica Neue", Helvetica, Arial, "Han Heiti GB", sans-serif;
-$comma-font: "Biaodian Pro Sans GB", "Helvetica Neue", Helvetica, Arial, "Han Heiti GB", sans-serif;
+$normal-font : 'BOOK', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
 //mixin
 //字符边框
@@ -45,9 +44,9 @@ $comma-font: "Biaodian Pro Sans GB", "Helvetica Neue", Helvetica, Arial, "Han He
 
 //居中对齐
 @mixin block-align-center {
-    margin-left: auto; 
-    margin-right:auto; 
-    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 }
 
 
@@ -56,6 +55,7 @@ $comma-font: "Biaodian Pro Sans GB", "Helvetica Neue", Helvetica, Arial, "Han He
 .categories-url,
 .publish-date {
     display: inline-block;
+    background-image: none;
     @include word-margin-padding();
 }
 
@@ -87,21 +87,16 @@ pre {
     word-spacing: inherit;
 }
 
-code:lang(zh-Hans),
-kbd:lang(zh-Hans),
-samp:lang(zh-Hans),
-pre:lang(zh-Hans),
-code:lang(zh-CN),
-kbd:lang(zh-CN),
-samp:lang(zh-CN),
-pre:lang(zh-CN) {
+code, pre {
     @include code-format();
+    text-indent: 0;
 }
 
 p code {
     @include pre-border();
     padding: .1em .5em;
 }
+
 /*  code pre end */
 
 /* table begin */
@@ -129,31 +124,125 @@ table {
 }
 /* table end */
 
+/* definition start */
+dl {
+    @include pre-border();
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-top: .8em;
+    padding-left: .8em;
+    padding-right: .8em;
+}
+
+dt {
+    margin-bottom: .5em;
+    margin-top: .5em;
+    padding-top: .1em;
+    color: #586069;
+    font-weight: bold;
+}
+
+dd {
+    margin-bottom: .5em;
+    margin-top: .5em;
+    margin-inline-start: 2em;
+}
+
+dd ol,
+dd ul {
+    padding-left: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+dd p {
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+dd pre {
+    margin: 0;
+}
+/* definition start */
+
 /* image begin */
 img {
     width: 80%;
     @include block-align-center();
 }
+
 /* image end */
 
 
 /*  content paragraph begin */
+h1 {
+    text-align: center;
+    margin: 2em 0;
+    color: #586069;
+}
+
+h2 {
+    border-bottom: 2px solid #eaecef;
+    padding-bottom: .2em;
+    margin-top: 1.5em;
+    color: #586069;
+}
+
 .content {
+    width: 90%;
+    margin: 5em auto 3em;
+    max-width: 38rem;
+    text-align: justify;
     @include normal-font-format();
 }
 
-/* 单独处理逗号 */
-h-char {
-    font-family: $comma-font;
+article {
+    line-height: 1.6em;
 }
 
 em {
     font-style: normal;
     color: #000;
     text-decoration: underline;
-    text-decoration-style: double;
     text-decoration-color: #ccc;
     text-emphasis-style: none;
 }
 
+article a {
+    text-decoration: none;
+    background-repeat: repeat-x;
+    background-position: bottom;
+    background-size: 100% 6px;
+    color: #000;
+    background-image: linear-gradient(transparent,transparent 3.5px,#000 3.5px,#000 calc(3.5px + .5pt),transparent calc(3.5px + .5pt),transparent);
+}
+
 /* content paragraph end */
+
+
+/* cjk with english */
+html.han-la hanla:after {
+    content: " ";
+    display: inline;
+    font-family: Arial;
+    font-size: 0.8em;
+}
+
+html.han-la code hanla,
+html.han-la pre hanla,
+html.han-la kbd hanla,
+html.han-la samp hanla {
+    display: none;
+}
+
+html.han-la ol>hanla,
+html.han-la ul>hanla {
+    display: none;
+}
+/* cjk with english */
+
+
+@font-face {
+    font-family: "BOOK";
+    src: url("./font/book.woff2") format("woff2"),
+        url("./font/book.woff") format("woff")
+}

@@ -198,6 +198,82 @@ html.han-la ul > hanla {
 }
 
 /* cjk with english */
+/* reponsive begin */
+@media only screen and (min-width: 769px) {
+  .content {
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .content {
+    padding: 2em 1em;
+    margin-top: 1em;
+    font-size: 0.9em;
+  }
+
+  .post-item-title {
+    margin-left: 1.3em;
+  }
+
+  .post-item-time {
+    flex: 25%;
+    text-align: right;
+  }
+
+  .post-item-title {
+    flex: 51.8% !important;
+  }
+
+  .tag-title {
+    margin-top: 3em;
+    flex-direction: column;
+  }
+
+  .tag-title-left {
+    flex: 1;
+    text-align: center;
+    font-size: 1.4em;
+  }
+
+  .tag-title-right {
+    text-align: center;
+  }
+
+  dl {
+    grid-template-columns: none;
+    display: block;
+  }
+
+  dt {
+    max-width: 40em;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .content {
+    padding: 2em 0.2em;
+    margin-top: 0.2em;
+    font-size: 0.9rem;
+  }
+
+  .post-item-time {
+    flex: 1;
+    text-align: right;
+  }
+
+  .post-item-title {
+    flex: 61.8% !important;
+  }
+
+  .tag-title-left {
+    text-align: left;
+  }
+
+  .tag-title-right {
+    text-align: left;
+  }
+}
+/* reponsive end */
 @font-face {
   font-family: "BOOK";
   src: url("./font/book.woff2") format("woff2"), url("./font/book.woff") format("woff");

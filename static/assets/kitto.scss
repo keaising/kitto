@@ -11,7 +11,7 @@ $bold-border : $grey-border 2px solid;
 
 //font
 $mono-font : Iosevka, Consolas, 'Source Code Pro', Menlo, monospace;
-$normal-font : 'BOOK', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+$normal-font : 'Geneva', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
 //mixin
 //字符边框
@@ -90,6 +90,7 @@ pre {
 code, pre {
     @include code-format();
     text-indent: 0;
+    overflow: auto;
 }
 
 p code {
@@ -326,4 +327,10 @@ html.han-la ul>hanla {
     font-family: "BOOK";
     src: url("./font/book.woff2") format("woff2"),
         url("./font/book.woff") format("woff")
+}
+
+@font-face {
+    font-family: "LUCIDA";
+    src: url("./font/lucida_grande.woff2") format("woff2"),
+        url("./font/lucida_grande.woff") format("woff")
 }

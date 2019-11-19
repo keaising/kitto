@@ -1,0 +1,27 @@
+<ul class="collection">
+    <div class="post-item lc-info">
+        <div class="lc-left grid-cell">Diffculty</div>
+        <div class="lc-right grid-cell">
+            {{ .Params.lcDiffculty }}
+        </div>
+    </div>
+    <div class="post-item  lc-info">
+        <div class="lc-left grid-cell">Goto</div>
+        <div class="lc-right grid-cell">
+            <a href="{{ .Params.lcUrl }}">
+                <div>{{ .Params.lcName }}</div>
+            </a>
+        </div>
+    </div>
+    <div class="post-item  lc-info">
+        <div class="lc-left grid-cell">Language</div>
+        <div class="lc-right grid-cell">
+            {{ $NoSpace := replace .Params.lcPl " " "-" }}
+            {{ $NoSlash := replace $NoSpace "/" "-" }}
+            {{ $url := lower $NoSlash }}
+            <a href='/tags/{{ $url }}'>
+                <div>{{ .Params.lcPl }}</div>
+            </a>
+        </div>
+    </div>
+</ul>

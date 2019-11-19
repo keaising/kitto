@@ -1,0 +1,57 @@
+{{ define "title" }}
+{{ .Title }} &ndash; {{ .Site.Title }}
+{{ end }}
+
+
+
+{{ define "main" }}
+
+<!-- Title -->
+<div class="Subhead">
+    <div class="Subhead-heading">
+        <h1>{{ .Title }}</h1>
+    </div>
+</div>
+
+
+
+
+<article>
+        {{ partial "leetcode-info.html" . }}
+    <!-- Content -->
+    <div class="true-content">
+        {{ .Content }}
+    </div>
+
+    <div class="page-info">
+        <div>
+            {{ partial "taxonomy.html" . }}
+        </div>
+        {{ if ( default true .Params.showDate ) }}
+            {{ if (ge .PublishDate.Year 1970) }}
+                <div class="publish-date">
+                    <span
+                        title="Lastmod: {{ .Lastmod.Format "2006-01-02" }}. Published at: {{ .PublishDate.Format "2006-01-02" }}.">
+                        {{ dateFormat "2 Jan 2006" .PublishDate }}
+                    </span>
+                </div>
+            {{ end }}
+        {{ end }}
+    </div>
+</article>
+
+
+
+
+{{ end }}
+
+
+
+{{ define "side" }}
+{{ if and (gt .WordCount 0 ) (ne .Params.toc "false") }}
+<div id="toc" class="Box Box--blue mb-3">
+    <b>{{.Title}}</b>
+    {{ .TableOfContents }}
+</div>
+{{ end }}
+{{ end }}

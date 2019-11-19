@@ -3,15 +3,18 @@ $grey-black : #586069;
 $grey-white : #eaecef;
 $grey-border : #dfe2e5;
 $black : #000;
+$red : #bb2222;
+$light-blue: #0086b3;
 
 //style
 $thin-border : $grey-border 1px solid;
 $bold-border : $grey-border 2px solid;
 
-
 //font
 $mono-font : Iosevka, Consolas, 'Source Code Pro', Menlo, monospace;
-$normal-font : 'Geneva', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+$normal-font : 'firasans-book', 'Geneva', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+$title-font : 'BOOK';
+$time-font : 'firasans-italic';
 
 //mixin
 //字符边框
@@ -49,6 +52,37 @@ $normal-font : 'Geneva', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: block;
 }
 
+
+/* top navi site start */
+.top-header {
+    margin: auto;
+    max-width: 38rem;
+    margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.site-title {
+    background-image: url(../favicon.ico);
+    background-size: cover;
+    display: inline-block;
+    width: 1.2em;
+    height: 1.2em;
+    color: transparent;
+}
+
+.site-title,
+.nav-item {
+    padding: .4em;
+}
+
+.nav-item {
+    border-top: 2px solid #cacaca;
+    display: inline-block;
+    margin-left: .5em;
+}
+/* top navi site end */
 
 /* tag categories begin */
 .tags-url,
@@ -208,16 +242,104 @@ em {
     text-emphasis-style: none;
 }
 
+a,
+header #header h1 a,
+article .title a,
+article .meta .tags a,
+article .divider a {
+    text-decoration: none;
+    color: $red;
+}
+
+.site-title:hover,
+.nav-item:hover {
+    background-color: #f0f0f0;
+    border-top-color: #b0b0b0
+}
+
 article a {
     text-decoration: none;
     background-repeat: repeat-x;
     background-position: bottom;
-    background-size: 100% 6px;
-    color: #000;
-    background-image: linear-gradient(transparent,transparent 3.5px,#000 3.5px,#000 calc(3.5px + .5pt),transparent calc(3.5px + .5pt),transparent);
+    background-size: 100% 4px;
+    color: $red;
+    //background-image: linear-gradient(transparent,transparent 3.5px,#000 3.5px, $grey-white calc(3.5px + .5pt),transparent calc(3.5px + .5pt),transparent);
 }
 
 /* content paragraph end */
+
+/* collection start */ 
+.collection {
+    padding-left: 0;
+    text-indent: 0;
+}
+
+.collection-set {
+    margin: auto;
+}
+
+.grid-cell {
+    -webkit-box-flex: 1;
+    flex: 1;
+}
+
+.post-item {
+    align-content: center;
+    display: flex;
+    list-style: none;
+    margin-top: 1em;
+}
+
+.post-item-time {
+    flex: 20%;
+    text-align: right;
+    color: #999;
+    font-family: $title-font;
+}
+
+.post-item-title {
+    flex: none;
+    flex: 41.8% !important;
+}
+
+.cloud {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cloud-item {
+    margin-left: .8em;
+    margin-right: .8em;
+}
+
+.cloud a {
+    color: #999;
+}
+
+.tag-title a {
+    color: #586069;
+}
+
+.tag-title {
+    flex: 1;
+    display: flex;
+    margin-top: 3em;
+    justify-content: space-between;
+}
+
+.tag-title-left {
+    flex: 20%;
+    text-align: right;
+    font-size: 1.5em;
+    font-family: $title-font;
+}
+
+.tag-title-right {
+    flex: 41.8%;
+    text-align: left;
+    color: #999999;
+}
+/* collection end */
 
 
 /* cjk with english */
@@ -331,6 +453,18 @@ html.han-la ul>hanla {
 
 @font-face {
     font-family: "LUCIDA";
-    src: url("./font/lucida_grande.woff2") format("woff2"),
-        url("./font/lucida_grande.woff") format("woff")
+    src: url("./font/lucida.woff2") format("woff2"),
+        url("./font/lucida.woff") format("woff")
+}
+
+@font-face {
+    font-family: "firasans-book";
+    src: url("./font/firasans-book.woff2") format("woff2"),
+        url("./font/firasans-book.woff") format("woff");
+}
+
+@font-face {
+    font-family: "firasans-italic";
+    src: url("./font/firasans-italic.woff2") format("woff2"),
+        url("./font/firasans-italic.woff") format("woff");
 }

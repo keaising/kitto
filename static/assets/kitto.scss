@@ -213,6 +213,7 @@ h1 {
     text-align: center;
     margin: 2em 0;
     color: #586069;
+    font-family: $title-font;
 }
 
 h2 {
@@ -220,6 +221,7 @@ h2 {
     padding-bottom: .2em;
     margin-top: 1.5em;
     color: #586069;
+    font-family: $title-font;
 }
 
 .content {
@@ -294,7 +296,6 @@ article a {
     flex: 20%;
     text-align: right;
     color: #999;
-    font-family: $title-font;
 }
 
 .post-item-title {

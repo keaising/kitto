@@ -232,15 +232,22 @@ h2 {
     @include normal-font-format();
 }
 
+.Math {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-left: .3em;
+    padding-right: .3em;
+}
+
+.Math-Formula {
+    text-align: center;
+}
+
 article {
     line-height: 1.6em;
 }
 
 em {
-    font-style: normal;
-    color: #000;
-    text-decoration: underline;
-    text-decoration-color: #ccc;
+    font-style: italic;
     text-emphasis-style: none;
 }
 

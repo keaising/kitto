@@ -12,8 +12,8 @@ $bold-border : $grey-border 2px solid;
 
 //font
 $mono-font : Iosevka, Consolas, 'Source Code Pro', Menlo, monospace;
-$normal-font : 'firasans-book', 'Geneva', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-$title-font : 'BOOK';
+$normal-font : 'LatoLatin', 'firasans-book', 'Geneva', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+$title-font : 'LatoLatin';
 $time-font : 'firasans-italic';
 
 //mixin
@@ -468,9 +468,9 @@ html.han-la ul>hanla {
 
 
 @font-face {
-    font-family: "BOOK";
-    src: url("./font/book.woff2") format("woff2"),
-        url("./font/book.woff") format("woff")
+    font-family: "LatoLatin";
+    src: url("./font/LatoLatin.woff2") format("woff2"),
+        url("./font/LatoLatin.woff") format("woff")
 }
 
 @font-face {

@@ -12,9 +12,10 @@ $bold-border : $grey-border 2px solid;
 
 //font
 $mono-font : Iosevka, Consolas, 'Source Code Pro', Menlo, monospace;
-$normal-font : 'LatoLatin', 'firasans-book', 'Geneva', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-$title-font : 'LatoLatin', $normal-font;
-$time-font : 'firasans-italic', $normal-font;
+$normal-font : 'Lato', 'Geneva', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+$title-font : 'LatoBoldItalic', $normal-font;
+$time-font : 'LatoItalic', $normal-font;
+$italic-font : 'LatoItalic', $normal-font;
 
 //mixin
 //字符边框
@@ -94,6 +95,7 @@ $time-font : 'firasans-italic', $normal-font;
 }
 
 .datetime-span {
+    font-family: $time-font;
     display: inline-block;
     white-space: nowrap;
 }
@@ -213,6 +215,9 @@ h1 {
     text-align: center;
     margin: 2em 0;
     color: #586069;
+}
+
+h1,h2,h3,h4,h5,h6 {
     font-family: $title-font;
 }
 
@@ -221,7 +226,6 @@ h2 {
     padding-bottom: .2em;
     margin-top: 1.5em;
     color: #586069;
-    font-family: $title-font;
 }
 
 .content {
@@ -248,7 +252,11 @@ article {
 }
 
 em {
-    font-style: italic;
+    font-family: $italic-font;
+    @include pre-border();
+    padding: .2em;
+    margin: 0 .3em 0 .3em;
+    font-style: normal;
     text-emphasis-style: none;
 }
 
@@ -306,6 +314,8 @@ article a {
     color: #999;
 }
 
+
+
 .post-item-title {
     flex: none;
     flex: 41.8% !important;
@@ -317,6 +327,7 @@ article a {
 }
 
 .cloud-item {
+    font-family: $italic-font;
     margin-left: .8em;
     margin-right: .8em;
 }
@@ -470,24 +481,48 @@ html.han-la ul>hanla {
 
 @font-face {
     font-family: "LatoLatin";
-    src: url("./font/LatoLatin.woff2") format("woff2"),
-        url("./font/LatoLatin.woff") format("woff")
+    src: url("../font/LatoLatin.woff2") format("woff2"),
+        url("../font/LatoLatin.woff") format("woff")
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url("../font/Lato-Regular.woff2") format("woff2"),
+        url("../font/Lato-Regular.woff") format("woff")
+}
+
+@font-face {
+    font-family: "LatoItalic";
+    src: url("../font/Lato-Italic.woff2") format("woff2"),
+        url("../font/Lato-Italic.woff") format("woff")
+}
+
+@font-face {
+    font-family: "LatoBold";
+    src: url("../font/Lato-Bold.woff2") format("woff2"),
+        url("../font/Lato-Bold.woff") format("woff")
+}
+
+@font-face {
+    font-family: "LatoBoldItalic";
+    src: url("../font/Lato-BoldItalic.woff2") format("woff2"),
+        url("../font/Lato-BoldItalic.woff") format("woff")
 }
 
 @font-face {
     font-family: "LUCIDA";
-    src: url("./font/lucida.woff2") format("woff2"),
-        url("./font/lucida.woff") format("woff")
+    src: url("../font/lucida.woff2") format("woff2"),
+        url("../font/lucida.woff") format("woff")
 }
 
 @font-face {
     font-family: "firasans-book";
-    src: url("./font/firasans-book.woff2") format("woff2"),
-        url("./font/firasans-book.woff") format("woff");
+    src: url("../font/firasans-book.woff2") format("woff2"),
+        url("../font/firasans-book.woff") format("woff");
 }
 
 @font-face {
     font-family: "firasans-italic";
-    src: url("./font/firasans-italic.woff2") format("woff2"),
-        url("./font/firasans-italic.woff") format("woff");
+    src: url("../font/firasans-italic.woff2") format("woff2"),
+        url("../font/firasans-italic.woff") format("woff");
 }

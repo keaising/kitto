@@ -2,7 +2,7 @@
 
 <ul class="collection">
     {{ range $section := .Site.Sections }}
-    {{ if (ne $section.Title "Posts") }}
+    {{ if and (ne $section.Title "Posts") (ne $section.Title "Drafts")}}
     <div class="tag-title">
         <div class="tag-title-left grid-cell"><a href="{{ $section.RelPermalink }}">{{ $section.Title }}</a></div>
         <div class="tag-title-center grid-cell"></div>

@@ -1,9 +1,7 @@
 
 
-ul,
-li {
-    display: list-items;
-    list-style: none;
+ul li {
+    list-style-image: url("../image/circle-notch-solid-10.svg"); 
 }
 
 ol li {
@@ -11,39 +9,18 @@ ol li {
     counter-increment: item;
 }
 
-ul,
-ol {
+ul {
     padding-left: 2em;
-    text-indent: -2em;
+    list-style-type : none;
 }
 
-ul li::before {
-    content: '\f1ce';
-    font-family: "Font Awesome\ 5 Free";
-    font-size: .9em;
-    color: #999;
-    font-weight: 600;
-    padding-right: 1.1em;
+ul li ul li {
+    list-style-image: url("../image/times-solid-10.svg");
+    counter-increment: none; 
 }
 
-ol li::before {
-    content: counter(item) ".  ";
-    border-radius: 100%;
-    text-align: left;
-    font-size: .9em;
-    color: #999;
-    font-weight: 600;
-    padding-right: 1.1em;
-}
-
-li ul li::before {
-    content: '\f00d';
-    margin-right: .3em;
-}
-
-li ul li ul li::before {
-    margin-left: 1em;
-    content: '\f068';
+ul li ul li ul li {
+    list-style-image: url("../image/minus-solid-10.svg"); 
 }
 
 .page-info {

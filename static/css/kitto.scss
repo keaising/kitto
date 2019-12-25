@@ -112,6 +112,11 @@ $italic-font : 'LatoItalic', $normal-font;
 
 /* tag categories end */
 
+p {
+    margin-block-start: 1.6em;
+    margin-block-end: 1.6em;
+}
+
 /*  code pre begin */
 pre {
     @include code-format();
@@ -210,6 +215,24 @@ img {
 /* image end */
 
 
+/* blockquote begin */
+blockquote {
+    display: block;
+    //background-color: $grey-white;
+    border: $grey-white 1px solid;
+    border-left: $grey-black 1px solid;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    // padding-block-start: 1em;
+    // padding-block-end: 1em;
+    padding-inline-start: 2em;
+    padding-inline-end: 2em;
+}
+
+/* blockquote end */
+
 /*  content paragraph begin */
 h1 {
     text-align: center;
@@ -222,9 +245,10 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 h2 {
-    border-bottom: 2px solid #eaecef;
+    text-align: center;
+    //border-bottom: 2px solid #eaecef;
     padding-bottom: .2em;
-    margin-top: 1.5em;
+    margin-top: 4em;
     color: #586069;
 }
 

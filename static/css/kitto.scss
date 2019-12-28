@@ -6,6 +6,8 @@ $black : #000;
 $red : #bb2222;
 $light-blue: #0086b3;
 
+$width: 45em;
+
 //style
 $thin-border : $grey-border 1px solid;
 $bold-border : $grey-border 2px solid;
@@ -57,7 +59,7 @@ $italic-font : 'LatoItalic', $normal-font;
 /* top navi site start */
 .top-header {
     margin: auto;
-    max-width: 38rem;
+    max-width: $width;
     margin-bottom: 3rem;
     display: flex;
     align-items: center;
@@ -222,7 +224,7 @@ blockquote {
     border: $grey-white 1px solid;
     border-left: $grey-black 1px solid;
     margin-block-start: 0;
-    margin-block-end: 0;
+    margin-block-end: .5em;
     margin-inline-start: 0;
     margin-inline-end: 0;
     // padding-block-start: 1em;
@@ -237,7 +239,8 @@ blockquote {
 h1 {
     text-align: center;
     margin: 2em 0;
-    color: #586069;
+    //color: #586069;
+    font-size: 2.3em;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -246,16 +249,26 @@ h1,h2,h3,h4,h5,h6 {
 
 h2 {
     text-align: center;
-    //border-bottom: 2px solid #eaecef;
-    padding-bottom: .2em;
+    font-size: 1.8em;
+    border-bottom: 1px dotted #eaecef;
+    padding-bottom: .4em;
     margin-top: 4em;
-    color: #586069;
+    //color: #586069;
+}
+
+h3 {
+    font-size: 1.3em;    
+    //color: #586069;
+    margin-block-start: 2.5em;
+    margin-block-end: 0;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
 }
 
 .content {
     width: 90%;
     margin: 5em auto 3em;
-    max-width: 38rem;
+    max-width: $width;
     text-align: justify;
     @include normal-font-format();
 }

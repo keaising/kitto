@@ -1,27 +1,33 @@
 
 
-ul li {
+/* ul li {
     list-style-image: url("../image/circle-notch-solid-10.svg"); 
-}
+    list-style-position: inside;
+} */
 
-ol li {
+/* ol li {
     margin-top: 0.1em;
     counter-increment: item;
+} */
+
+ul, ol {
+    /* padding-left: 2em; */
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 2em;
 }
 
-ul {
-    padding-left: 2em;
-    list-style-type : none;
-}
-
-ul li ul li {
+/* ul li ul li {
     list-style-image: url("../image/times-solid-10.svg");
     counter-increment: none; 
 }
 
 ul li ul li ul li {
     list-style-image: url("../image/minus-solid-10.svg"); 
-}
+} */
 
 .page-info {
     text-align: right;

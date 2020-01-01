@@ -83,6 +83,7 @@ code, pre {
   font-weight: 200;
   text-indent: 0;
   overflow: auto;
+  background-color: #f6f8fa;
 }
 
 p code {
@@ -123,17 +124,16 @@ dl {
   border: 1px solid #eaecef;
   margin-block-start: 0;
   margin-block-end: 0;
-  padding-top: 0.8em;
   padding-left: 0.8em;
   padding-right: 0.8em;
 }
 
 dt {
-  margin-bottom: 0.5em;
-  margin-top: 0.5em;
-  padding-top: 0.1em;
+  padding-bottom: 0.4em;
+  padding-top: 1em;
   color: #586069;
   font-weight: bold;
+  border-top: #eaecef 1px solid;
 }
 
 dd {
@@ -172,7 +172,6 @@ img {
 blockquote {
   display: block;
   border: #eaecef 1px solid;
-  border-left: #586069 1px solid;
   margin-block-start: 0;
   margin-block-end: 0.5em;
   margin-inline-start: 0;
@@ -182,6 +181,10 @@ blockquote {
 }
 
 /* blockquote end */
+blockquote, dl {
+  border-left: 3px solid #c0363f;
+}
+
 /*  content paragraph begin */
 h1 {
   text-align: center;
@@ -213,7 +216,7 @@ h3 {
   width: 90%;
   margin: 5em auto 3em;
   max-width: 45em;
-  text-align: justify;
+  text-align: left;
   color: #000;
   font-weight: 400;
   font-size: 0.95em;
@@ -224,6 +227,9 @@ h3 {
   font-size: 0.9em;
   padding-left: 0.3em;
   padding-right: 0.3em;
+  padding-block-start: 0.8em;
+  padding-block-end: 0.8em;
+  overflow: auto;
 }
 
 .Math-Formula {

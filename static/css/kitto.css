@@ -67,7 +67,6 @@ p {
 pre {
   font-family: Iosevka, Consolas, "Source Code Pro", Menlo, monospace;
   font-size: 0.8rem;
-  font-weight: 200;
   border-radius: 1px;
   border: 1px solid #eaecef;
   tab-size: 4;
@@ -80,7 +79,6 @@ pre {
 code, pre {
   font-family: Iosevka, Consolas, "Source Code Pro", Menlo, monospace;
   font-size: 0.8rem;
-  font-weight: 200;
   text-indent: 0;
   overflow: auto;
   background-color: #f6f8fa;

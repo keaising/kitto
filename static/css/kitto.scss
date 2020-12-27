@@ -34,7 +34,6 @@ $italic-font : 'LatoItalic', $normal-font;
 @mixin code-format {
     font-family: $mono-font;
     font-size: .8rem;
-    font-weight: 200;
 }
 
 @mixin normal-font-format {

@@ -391,7 +391,7 @@ html.han-la ul > hanla {
   .content {
     padding: 2em 1em;
     margin-top: 1em;
-    font-size: 0.9em;
+    /*font-size: 0.9em;*/
   }
 
   .post-item-title {
@@ -435,7 +435,7 @@ html.han-la ul > hanla {
   .content {
     padding: 2em 0.2em;
     margin-top: 0.2em;
-    font-size: 0.9rem;
+    /*font-size: 0.9rem;*/
   }
 
   .post-item-time {
